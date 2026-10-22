@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>JobFine – find your ideal job (demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="#top"><b>▰</b> Job<span>Fine</span></a>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+      <nav id="menu">
+        <a href="#jobs">Platform</a><a href="#about">Solution</a><a href="#photos">Resources</a
+        ><a href="#contact">Company</a> <button class="btn" id="bookDemo">Book A Demo</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="left">
+          <h1>Find Your<br />Ideal Job</h1>
+          <p>Browse sample roles from fictional employers. Search by title, then filter by work type.</p>
+          <form class="searchbar" id="heroSearch">
+            <input id="heroQ" placeholder="Search job" aria-label="Search job" /><button class="btn">
+              Search
+            </button>
+          </form>
+          <div class="unlock">
+            <div class="stat">
+              <b>8M+</b><small>Matches Made<br />(sample number)</small>
+            </div>
+            <div>
+              <h3>Unlocking your potential</h3>
+              <small>Here to help with our logistics</small><br /><a href="#jobs" class="browse"
+                >Browse All Categories ↗</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="photo" aria-hidden="true"></div>
+          <button class="float alert" id="alertBtn">🔔 Job Alert Subscribe</button>
+          <div class="float cand">
+            <b>5k+ candidates get job</b>
+            <div class="faces">
+              <i style="background: #e8623a">A</i><i style="background: #3b9ed9">B</i
+              ><i style="background: #f0b44a">C</i><i style="background: #7a5cf0">D</i><em>＋</em>
+            </div>
+            <small>Sample number</small>
+          </div>
+          <form class="float talent" id="talentForm">
+            <label>Type of Work<select id="tType"></select></label
+            ><label>Position<input id="tPos" placeholder="e.g. Designer" /></label
+            ><button class="btn wide">Search Talent</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="partners" aria-label="Sample partner names">
+        <span>NORTHWIND&nbsp;CO</span><span>Brightly</span><span>VELA</span><span>Harbor&amp;Pine</span
+        ><span>Orbitly</span><span>Lumen</span>
+      </section>
+
+      <section id="jobs">
+        <h2>Open roles <small id="count"></small></h2>
+        <div class="tools">
+          <select id="type" aria-label="Work type"></select
+          ><select id="sort" aria-label="Sort">
+            <option value="new">Newest</option>
+            <option value="high">Salary: high to low</option>
+            <option value="az">Title A–Z</option></select
+          ><button class="btn ghost" id="clear">Clear filters</button>
+        </div>
+        <div class="jobs" id="jobList"></div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About JobFine</h2>
+        <p>
+          JobFine is a fictional job platform built for a demonstration project. Companies, roles, salaries
+          and statistics are sample data. Applying is a mock form and nothing is sent.
+        </p>
+      </section>
+
+      <section id="photos">
+        <h2>Workplace photos</h2>
+        <p class="hint">Upload photos of your team or office.</p>
+        <div id="gallery"></div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact us</h2>
+        <form id="contactForm" novalidate>
+          <input id="cName" placeholder="Name" aria-label="Name" /><input
+            id="cEmail"
+            type="email"
+            placeholder="Email"
+            aria-label="Email"
+          /><textarea id="cMsg" placeholder="Message" aria-label="Message"></textarea
+          ><button class="btn">Send message</button><small id="cOut" role="status"></small>
+        </form>
+      </section>
+    </main>
+    <footer>JobFine · fictional brand for a demonstration project</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
